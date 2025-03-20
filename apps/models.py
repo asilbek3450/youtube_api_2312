@@ -18,7 +18,7 @@ class Channel(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=500)
-    subscribers = models.ManyToManyField(User, related_name='subscribers')
+    subscribers = models.ManyToManyField(User, related_name='subscribers', blank=True, null=True)
 
     def __str__(self):
         return self.name
