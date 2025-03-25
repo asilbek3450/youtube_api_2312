@@ -25,3 +25,21 @@ class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
         fields = '__all__'
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = '__all__'
+
+
+class VideoLikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VideoLike
+        fields = '__all__'
+
+
+class CommentLikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CommentLike
+        fields = '__all__'
